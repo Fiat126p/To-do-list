@@ -1,0 +1,47 @@
+.section {
+    max-width: 800px;
+    background-color: white;
+    margin: 5px auto;
+    padding: 2px;
+}
+
+.section__header {
+    font-size: 20px;
+    padding: 20px;
+    margin: 20px 10px;
+    border-bottom: 2px solid #eee;
+}
+
+.section__form {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    flex-basis: 800px;
+}
+
+@media (max-width: 767px) {
+    .section__form {
+        grid-template-columns: 1fr;
+    }
+}
+
+.section__formImput {
+    padding: 10px;
+    margin: 5px 10px;
+}
+
+.section__formButton {
+    padding: 10px;
+    margin: 5px 10px;
+    background-color: rgb(11, 82, 75);
+    color: white;
+    border: none;
+}
+
+.section__formButton:hover {
+    background-color: rgb(9, 63, 58);
+}
+
+.section__formButton:active {
+    background-color: rgb(51, 163, 152);
+}
