@@ -1,7 +1,7 @@
 # To-do list
 ![Lista](images/List.png)
 
-https://fiat126p.github.io/list/
+https://fiat126p.github.io/To-do-list/
 
 ## Application description
 It is an application that allows you to create a to-do list, shopping list or any other kind of list.
