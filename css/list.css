@@ -15,10 +15,12 @@
     height: 25px;
     padding: 0;
     background-color: rgb(53, 104, 2);
+    transition: background 1s, transform 2s;
 }
 
 .list__button:hover {
     background-color: rgb(35, 68, 2);
+    transform:scale(1.5) rotate(360deg);
 }
 
 .list__button:active {
@@ -32,10 +34,12 @@
     height: 25px;
     padding: 0;
     background-color: rgb(221, 0, 44);
+    transition: background 1s, transform 2s;
 }
 
 .list__buttonRemove:hover {
     background-color: rgb(158, 1, 33);
+    transform:scale(1.5) rotate(360deg);
 }
 
 .list__buttonRemove:active {
