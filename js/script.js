@@ -1,6 +1,6 @@
 {
     let tasks = [];
-
+    let hideDoneTask = false;
 
 
     const addNewTask = (newTaskContent) => {
@@ -115,10 +115,6 @@
         document.querySelector(".js-buttons").innerHTML = buttonsHTML;
     };
 
-    
-
-
-
     const onFormSubmit = (event) => {
         event.preventDefault();
 
@@ -131,9 +127,17 @@
 
         document.querySelector(".js-newTask").value = "";
         newTaskElement.focus();
-
     };
 
+    const render = () => {
+        renderTask();
+        renderButtons();
+
+        bindEvents();
+        bindToggleTasksDone();
+        finishAllTasksDone();
+        bindToggleDoneEvents();
+    };
 
     const init = () => {
         render();
