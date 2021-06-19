@@ -1,6 +1,6 @@
 {
     let tasks = [];
-    
+
 
 
     const addNewTask = (newTaskContent) => {
@@ -36,6 +36,11 @@
         render();
     };
 
+    const toggleHideDoneTasks = () => {
+        hideDoneTask = !hideDoneTask;
+        render();
+    };
+
     const bindEvents = () => {
         const removeButtons = document.querySelectorAll(".js-remove");
 
@@ -52,6 +57,16 @@
                 toggleTaskDone(index);
             });
         });
+    };
+
+    const bindToggleTasksDone = () => {
+        const toggleHideDoneTasksButtons = document.querySelector(".js-toggleHideDoneTasks");
+
+        if (toggleHideDoneTasksButtons) {
+            toggleHideDoneTasksButtons.addEventListener("click", () => {
+                toggleHideDoneTasks();
+            });
+        };
     };
 
     onst finishAllTasksDone = () => {
