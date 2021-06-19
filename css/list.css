@@ -20,6 +20,7 @@
 
 .list__button:hover {
     background-color: rgb(35, 68, 2);
+    transform:scale(1.5);
 }
 
 .list__button:active {
@@ -38,6 +39,7 @@
 
 .list__buttonRemove:hover {
     background-color: rgb(158, 1, 33);
+    transform:scale(1.5);
 }
 
 .list__buttonRemove:active {
