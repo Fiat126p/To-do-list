@@ -28,6 +28,14 @@
         render();
     };
 
+    const setAllTaskDone = () => {
+        tasks = tasks.map(task => ({
+            ...task,
+            done: true,
+        }));
+        render();
+    };
+
     const bindEvents = () => {
         const removeButtons = document.querySelectorAll(".js-remove");
 
@@ -44,7 +52,17 @@
                 toggleTaskDone(index);
             });
         });
-    }
+    };
+
+    onst finishAllTasksDone = () => {
+        const toggleAllTasksButton = document.querySelector(".js-finishAllTasks");
+
+        if (toggleAllTasksButton) {
+            toggleAllTasksButton.addEventListener("click", () => {
+                setAllTaskDone();
+            });
+        }
+    };
 
     const render = () => {
         let htmlString = "";
