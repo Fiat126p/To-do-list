@@ -79,16 +79,16 @@
         }
     };
 
-    const render = () => {
+    const renderTask = () => {
         let htmlString = "";
 
         for (const task of tasks) {
             htmlString += `
-          <li class= "list__item js-tasks">
+          <li class= "list__item js-tasks ${task.done && hideDoneTask ? " list__item--hidden" : ""}"">
           <button class="list__button js-done" >
           ${task.done ? "✔" : ""}
           </button>
-          <span class= "${task.done ? "list__task--done" : ""}">${task.content}</span>
+          <span class= "list__taskContent ${task.done ? "list__task--done" : ""}">${task.content}</span>
           <button class=" list__buttonRemove js-remove">🗑</button>
           </li>
           `;
@@ -96,9 +96,6 @@
         }
 
         document.querySelector(".js-tasks").innerHTML = htmlString;
-
-        bindEvents();
-
     };
 
 
