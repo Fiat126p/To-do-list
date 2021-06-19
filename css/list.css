@@ -49,3 +49,7 @@
 .list__task--done {
     text-decoration: line-through;
 }
+
+.list__item--hidden {
+    display: none;
+}

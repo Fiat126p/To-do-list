@@ -9,5 +9,44 @@
     font-size: 20px;
     padding: 20px;
     margin: 20px 10px;
+}
+
+.section__container {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    padding: 10px;
+    margin: 5px;
     border-bottom: 2px solid #eee;
+    align-items: center;
+    
+}
+
+@media (max-width: 767px) {
+    .section__container {
+        grid-template-columns: 1fr;      
+    }
+}
+
+.section__button {
+    background-color: white;
+    color: hsl(180, 100%, 19%);
+    border: none;
+    transition: color 1s;
+    cursor: pointer;
+}
+
+.section__button:hover {
+    color: hsl(180, 100%, 30%);
+}
+
+.section__button:disabled {
+    color: #ccc;
+}
+
+@media (max-width: 767px) {
+    .section__buttons {
+        display: grid;
+        justify-content: center;
+        grid-template-columns: 1fr
+    }
 }
